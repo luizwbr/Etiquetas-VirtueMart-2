@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" version="2.5" method="upgrade">
+    <name>VirtueMart Gerador de Etiquetas - Weber TI</name>
+    <version>1.3</version>
+    <creationDate>Maio 2015</creationDate>
+    <author>Luiz Felipe Weber</author>
+    <authorEmail>weber@weber.eti.br</authorEmail>
+    <authorUrl>http://weber.eti.br</authorUrl>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <description>
+    &lt;div style=&quot;background:#E5F5FF;border:1px solid #99D6FF;padding:10px;margin:10px; -box-shadow: inset 0px 0px 10px #fff, 0px 0px 5px #ccc; -webkit-box-shadow: inset 0px 0px 10px #fff, 0px 0px 5px #ccc; -moz-box-shadow: inset 0px 0px 10px #fff, 0px 0px 5px #ccc;&quot;&gt;
+
+    &lt;h1&gt;VirtueMart Gerador de Etiquetas - Weber TI&lt;/h1&gt;    
+    &lt;/div&gt;   
+
+    &lt;br/&gt;
+
+    Licença: &lt;a href='http://www.gnu.org/licenses/gpl-3.0.html'&gt;GNU/GPL v3&lt;/a&gt;
+    &lt;br/&gt;
+    Desenvolvido por Luiz Felipe Weber - &lt;a href='http://weber.eti.br'&gt;Weber TI&lt;/a&gt; &lt;/a&gt;
+    &lt;/div&gt;
+    </description>
+	<files>
+        <filename plugin="vmetiquetas">vmetiquetas.php</filename>
+        <folder>admin</folder>        
+        <filename>licenca-gplv3.txt</filename>
+        <filename>gplv3-license.txt</filename>                
+	</files>
+    <languages folder="language">
+    </languages>
+    <config>
+         <fields name="params" addfieldpath="plugins/system/vmetiquetas/admin/elements/">
+            <fieldset name='basic'>
+                <field type="asset" path="plugins/system/vmetiquetas/admin/"/>                                
+
+                <field name="campo_numero" type="text" label="Campo Número"
+                        description="Nome do campo do comprador para o número do endereço"
+						default="numero" />
+				<field name="campo_complemento" type="text" label="Campo Complemento"
+                        description="Nome do campo do comprador para o complemento do endereço"
+						default="complemento" />
+				<field name="campo_bairro" type="text" label="Campo Bairro"
+                        description="Nome do campo do comprador para o bairro do endereço"
+						default="address_2" />
+						
+                <field type="spacer"/>
+                <field type="about" path="plugins/system/vmetiquetas/admin/" />
+            </fieldset>         
+        </fields>
+    </config>
+    <install>
+    </install>
+</extension>
